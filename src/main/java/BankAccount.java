@@ -92,4 +92,15 @@ public class BankAccount{
     public Integer getNewBalance(){
         return balance;
     }
+
+    public void withdraw(int amountWithdrawn) {
+        balance -= amountWithdrawn;
+        System.out.println("Deposited balance: " + amountWithdrawn);
+    }
+    public Integer getBalance(){
+        return balance;
+    }
+
+
+
 }

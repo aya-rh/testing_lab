@@ -14,19 +14,20 @@ public class BankAccountTest {
         deposit = new BankAccount();
     }
     @Test
-    void canAdd(){
+    void canDeposit(){
         var deposit = new BankAccount();
         assertThat(deposit.add(3L,2L)).isEqualTo(5L);
     }
     @Test
-    void canSubtract(){
-        var withdrawal = new BankAccount();
-        assertThat(withdrawal.subtract(4L, 3L)).isEqualTo(1L);
+    void canWithdraw(){
+        var withdraw = new BankAccount();
+        assertThat(withdraw.subtract(4L, 3L)).isEqualTo(1L);
     }
     @Test
     void canSumArray(){
         Long[] arr = {345L, 976L, 251L};
-        assertThat(deposit.sumArray(arr)).isEqualTo(1572);
+        BankAccount balance = new BankAccount();
+        assertThat(balance.sumArray(arr)).isEqualTo(1572);
     }
 
 
