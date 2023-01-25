@@ -14,18 +14,18 @@ public class BankAccount{
 
 
 //    list properties
-    public String firstName;
-    public String lastName;
-    public LocalDate dateOfBirth;
-    public Integer accountNumber;
-    public Integer balance;
+    private String firstName;
+    private String lastName;
+    private LocalDate dateOfBirth;
+    private Integer accountNumber;
+    private double balance;
 
-    public BankAccount(String inputFirstName, String inputLastName, LocalDate inputDateOfBirth, int accountNumber, int balance){
+    public BankAccount(String inputFirstName, String inputLastName, LocalDate inputDateOfBirth, int accountNumber, double balance){
         this.firstName = inputFirstName;
         this.lastName = inputLastName;
         this.dateOfBirth = inputDateOfBirth;
         this.accountNumber = 0;
-        this.balance = 100;
+        this.balance = 0;
     }
 
     public BankAccount() {
@@ -62,7 +62,7 @@ public class BankAccount{
         this.accountNumber = 0;
     }
 
-    public Integer getBalance(Integer BankBalance){
+    public double getBalance(Integer BankBalance){
         return this.balance;
     }
     public void setBalance(Integer BankBalance){
@@ -86,18 +86,18 @@ public class BankAccount{
     }
 
     public void deposit(Integer amountDeposited) {
-        balance += amountDeposited;
+        this.balance += amountDeposited;
         System.out.println("Deposited balance: " + amountDeposited);
     }
-    public Integer getNewBalance(){
+    public double getNewBalance(){
         return balance;
     }
 
     public void withdraw(int amountWithdrawn) {
-        balance -= amountWithdrawn;
+        this.balance -= amountWithdrawn;
         System.out.println("Deposited balance: " + amountWithdrawn);
     }
-    public Integer getBalance(){
+    public double getBalance(){
         return balance;
     }
 
