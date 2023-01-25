@@ -19,13 +19,15 @@ public class BankAccount{
     private LocalDate dateOfBirth;
     private Integer accountNumber;
     private double balance;
+    private String accountType;
 
-    public BankAccount(String inputFirstName, String inputLastName, LocalDate inputDateOfBirth, int accountNumber, double balance){
+    public BankAccount(String inputFirstName, String inputLastName, LocalDate inputDateOfBirth, int accountNumber, double balance, String inputAccountType){
         this.firstName = inputFirstName;
         this.lastName = inputLastName;
         this.dateOfBirth = inputDateOfBirth;
         this.accountNumber = 0;
         this.balance = 0;
+        this.accountType = inputAccountType;
     }
 
     public BankAccount() {
@@ -66,7 +68,14 @@ public class BankAccount{
         return this.balance;
     }
     public void setBalance(Integer BankBalance){
-        this.balance= 0;
+        this.balance = 0;
+    }
+
+    public String getAccountType(String AccountType){
+        return this.accountType;
+    }
+    public void setAccountType(String AccountType){
+        this.accountType = accountType;
     }
 
 
@@ -100,6 +109,23 @@ public class BankAccount{
     public double getBalance(){
         return balance;
     }
+
+
+//    Lab review correct interest calculator
+    public double calculateInterest(double percentage){
+        double interestToPay = this.balance * percentage;
+        return interestToPay;
+    }
+
+    
+//    public static void payInterest(double savingAccountInterest, double currentAccountInterest){
+//        if (accountType.equals("Savings Account")){
+//            this.balance += calculateInterest(savingAccountInterest);
+//        }
+//        else if (accountType.equals("Current Account")) {
+//            this.balance += calculateInterest(currentAccountInterest);
+//        }
+//    }
 
 
 

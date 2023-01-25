@@ -30,6 +30,12 @@ public class BankAccountTest {
         assertThat(balance.sumArray(arr)).isEqualTo(1572);
     }
 
+//    @Test
+//    void canPayInterest(){
+//        BankAccount.deposit(100);
+//        BankAccount.payInterest(0.02, 0.01);
+//        assertThat(BankAccount.getBalance()).isEqualTo(101);
+//    }
 
 
     // DEPOSIT

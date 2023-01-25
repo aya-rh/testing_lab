@@ -2,9 +2,9 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount("Aya", "Hezam", LocalDate.of(1999, 10, 6),123456, 100);
-        BankAccount bankAccount2 = new BankAccount("John", "Smith",LocalDate.of(1998, 11, 7), 78912, 200);
-        BankAccount bankAccount3 = new BankAccount("Emily", "Brown",LocalDate.of(1997, 12, 18), 654321, 300);
+        BankAccount bankAccount = new BankAccount("Aya", "Hezam", LocalDate.of(1999, 10, 6),123456, 100, "Current Account");
+        BankAccount bankAccount2 = new BankAccount("John", "Smith",LocalDate.of(1998, 11, 7), 78912, 200, "Savings Account");
+        BankAccount bankAccount3 = new BankAccount("Emily", "Brown",LocalDate.of(1997, 12, 18), 654321, 300, "Current Account");
 
         System.out.println(bankAccount.getLastName());
 
@@ -16,6 +16,8 @@ public class Main {
 
         bankAccount.withdraw(500);
         System.out.println("New Balance:" + bankAccount.getBalance());
+
+
 
 
 //        Object interest = new BankAccount();
